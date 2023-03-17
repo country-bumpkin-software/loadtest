@@ -1,8 +1,6 @@
 use hyper::Uri;
-use hyper::{body, Body, Client, Method, Request, Response, client::HttpConnector};
+use hyper::{ Body, Client, client::HttpConnector};
 use std::time::*;
-use std::{thread, time};
-use std::thread::sleep;
 
 #[tokio::main]
 async fn main() {
