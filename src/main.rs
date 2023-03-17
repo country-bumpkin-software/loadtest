@@ -35,7 +35,7 @@ fn calculate_avg_response_time(durations: Vec<Duration>, iterations: i32) {
 
 async fn make_get_request(client: Client<HttpConnector, Body>) {
         let handle = tokio::spawn(async move {
-        let url: hyper::Uri = Uri::from_static("http://localhost:8088/home");
+        let url: hyper::Uri = Uri::from_static("http://127.0.0.1:8080/person");
         let future = client.get(url).await;
         future.unwrap()
         });
